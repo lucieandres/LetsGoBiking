@@ -8,9 +8,9 @@ Avant de commencer, assurez-vous d'avoir correctement configuré l'environnement
 
 ## Utilisation
 1. Au démarrage, choisissez une adresse d'origine en saisissant son numéro :
-    - **1** : Polytech Nice Sophia *(parfait exemple pour une marche)*
-    - **2** : Lyon Brasserie Georges *(parfait exemple pour un itinéraire en vélo)*
-    - **3** : Bruxelles Atomium *(parfait exemple pour un itinéraire en vélo)*
+    - **1** : Polytech Nice Sophia
+    - **2** : Lyon Brasserie Georges
+    - **3** : Bruxelles Atomium
     - **4** : Nice Place Masséna
     - **5** : Autres *(saisir une adresse manuellement)*
 
