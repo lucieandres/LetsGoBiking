@@ -17,6 +17,10 @@ import java.util.List;
 
 public class TestWSclient {
 
+    private static List<String> receivedMessages = new ArrayList<>();
+    private static int currentIndexText = 0;
+    private static int currentIndexZoom = 0;
+
     public static void main(String[] args) {
 
         try {
@@ -79,21 +83,26 @@ public class TestWSclient {
                 Itinerary itineraryOriginToStation = is.getBikingItinerary(originCoordinates, stations.get(0));
                 Itinerary itineraryStationToStation = is.getBikingItinerary(stations.get(0), stations.get(1));
                 Itinerary itineraryStationToDestination = is.getBikingItinerary(stations.get(1), destinationCoordinates);
-                JXMapViewer mapViewer = new JXMapKit().getMainMap();
+
+                // Créer la zone de texte avec défilement
                 JTextArea textArea = new JTextArea();
+                textArea.setLineWrap(true);
+                textArea.setWrapStyleWord(true);
+                textArea.setColumns(30);
+
+                JScrollPane scrollPane = new JScrollPane(textArea);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
                 // Display the viewer in a JFrame
                 JFrame frame = new JFrame("Let's go biking !");
-                frame.getContentPane().add(mapViewer);
-                frame.setSize(800, 600);
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
-                frame.add(textArea, BorderLayout.WEST);
-                frame.getContentPane().add(mapViewer);
-                frame.setVisible(true);
+                frame.setLayout(new BorderLayout());
+                frame.setSize(800, 600);
 
                 // Create a TileFactoryInfo for OpenStreetMap
                 TileFactoryInfo info = new OSMTileFactoryInfo();
                 DefaultTileFactory tileFactory = new DefaultTileFactory(info);
+                JXMapViewer mapViewer = new JXMapKit().getMainMap();
                 mapViewer.setTileFactory(tileFactory);
 
                 List<GeoPosition> trackWalking1 = new ArrayList<>();
@@ -118,20 +127,22 @@ public class TestWSclient {
                 RoutePainter itineraire3 = new RoutePainter(trackWalking3);
 
                 RoutePainter.displayItineraire(mapViewer, itineraire1, itineraire2, itineraire3);
-                mapViewer.zoomToBestFit(new HashSet<>(trackWalking1), 0.7);
 
+                // Receive message from ActiveMQ
+                receivedMessages = receiveMessagesFromActiveMQ();
 
-                String receivedMessage = receiveMessageFromActiveMQ();
-                var text = "";
-                if (receivedMessage != null && !receivedMessage.isEmpty()) {
-                    String[] steps = receivedMessage.split("\n");
-                    for (String step : steps) {
-                        text += step + "\n";
-                    }
-                } else {
-                    text = "No message received";
-                }
-                textArea.setText(text);
+                JButton nextButton = new JButton("Display next step");
+                nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking1, trackBiking2, trackWalking3)));
+                frame.add(nextButton, BorderLayout.SOUTH);
+
+                // Add the map and scrollable text area to the frame
+                frame.add(mapViewer, BorderLayout.CENTER);
+                frame.add(scrollPane, BorderLayout.WEST);
+
+                frame.setVisible(true);
+
+                Set<GeoPosition> positions = new HashSet<>(trackBiking2);
+                mapViewer.zoomToBestFit(positions, 0.7);
             }
 
         } catch (Exception ex) {
@@ -139,9 +150,10 @@ public class TestWSclient {
         }
     }
 
-    private static String receiveMessageFromActiveMQ() {
+    private static List<String> receiveMessagesFromActiveMQ() {
         String brokerUrl = "tcp://localhost:61616";
         String queueName = "bikingItineraryQueue";
+        List<String> receivedMessages = new ArrayList<>();
 
         try {
             ActiveMQConnectionFactory connectionFactory = new ActiveMQConnectionFactory(brokerUrl);
@@ -154,17 +166,15 @@ public class TestWSclient {
 
             MessageConsumer consumer = session.createConsumer(destination);
 
-            Message message = consumer.receive();
-
-            if (message instanceof TextMessage) {
-                TextMessage textMessage = (TextMessage) message;
-                String receivedText = textMessage.getText();
-                consumer.close();
-                session.close();
-                connection.close();
-                return receivedText;
-            } else {
-                System.out.println("Received unexpected message type");
+            // Attempt to receive messages for a limited time
+            long startTime = System.currentTimeMillis();
+            while (System.currentTimeMillis() - startTime < 5000) { // Receive messages for 5 seconds
+                Message message = consumer.receive(100); // Wait for 100ms for a message
+                if (message != null && message instanceof TextMessage) {
+                    TextMessage textMessage = (TextMessage) message;
+                    String receivedText = textMessage.getText();
+                    receivedMessages.add(receivedText);
+                }
             }
 
             consumer.close();
@@ -174,6 +184,23 @@ public class TestWSclient {
             e.printStackTrace();
         }
 
-        return null;
+        return receivedMessages;
     }
+
+    private static void displayNextMessage(JTextArea textArea, JXMapViewer mapViewer, List<List<GeoPosition>> tracks) {
+        if (currentIndexText < receivedMessages.size()) {
+            String nextMessage = receivedMessages.get(currentIndexText);
+            textArea.append(nextMessage + "\n\n");
+            currentIndexText++;
+            if (currentIndexZoom < tracks.size()) {
+                Set<GeoPosition> positions = new HashSet<>(tracks.get(currentIndexZoom));
+                mapViewer.zoomToBestFit(positions, 0.7);
+                currentIndexZoom++;
+            }
+        } else {
+            textArea.append("You have reached the end of the itinerary !\n\n");
+        }
+    }
+
+
 }

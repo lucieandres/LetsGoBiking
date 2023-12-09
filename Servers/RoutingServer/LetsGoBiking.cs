@@ -248,7 +248,10 @@ namespace RoutingServer
             {
                 foreach (var segment in itinerary.Segments)
                 {
-                    instructionsBuilder.AppendLine($"Segment distance: {segment.Distance} meters, duration: {segment.Duration} seconds");
+                    double distanceInKm = segment.Distance / 1000.0;
+                    double durationInHours = segment.Duration / 3600.0;
+
+                    instructionsBuilder.AppendLine($"Segment distance: {distanceInKm:F2} kilometers, duration: {durationInHours:F2} hours");
 
                     foreach (var step in segment.Steps)
                     {
