@@ -20,7 +20,7 @@ Avant de commencer, assurez-vous d'avoir correctement configuré l'environnement
 
 5. Étapes à suivre :
     - Appuyez sur le bouton "Display Next Step" pour afficher les instructions et la carte zoomée jusqu'à la station la plus proche pour récupérer un vélo.
-    - Suivez l'itinéraire pas à pas : de la première station à la deuxième, puis de la station à votre destination.
+    - Suivez l'itinéraire pas à pas : de la première station à la seconde, puis de la station à votre destination.
 
 ## Remarque
 - Pour avancer dans les étapes, utilisez le bouton "Display Next Step".
