@@ -16,8 +16,7 @@ Avant de commencer, assurez-vous d'avoir correctement configuré l'environnement
 2. Choisissez une adresse de destination de la même manière.
 
 3. Une fenêtre s'ouvre affichant la carte avec l'itinéraire complet.
-
-4. Cliquez sur la fenêtre pour l'activer.
+   Cliquez sur la fenêtre.
 
 5. Étapes à suivre :
     - Appuyez sur le bouton "Display Next Step" pour afficher les instructions et la carte zoomée jusqu'à la station la plus proche pour récupérer un vélo.
