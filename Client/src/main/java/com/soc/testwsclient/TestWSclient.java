@@ -5,7 +5,6 @@ import org.apache.activemq.ActiveMQConnectionFactory;
 import org.jxmapviewer.JXMapKit;
 import org.jxmapviewer.JXMapViewer;
 import org.jxmapviewer.OSMTileFactoryInfo;
-import org.jxmapviewer.painter.CompoundPainter;
 import org.jxmapviewer.viewer.*;
 import org.jxmapviewer.viewer.GeoPosition;
 
@@ -28,7 +27,7 @@ public class TestWSclient {
             ILetsGoBiking is = service.getBasicHttpBindingILetsGoBiking();
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Origine :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Autres");
+            System.out.println("Origine :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Autres");
             String originChoice = sc.nextLine();
             String origin = "";
             switch (originChoice) {
@@ -42,6 +41,9 @@ public class TestWSclient {
                     origin = "Bruxelles Atomium";
                     break;
                 case "4":
+                    origin = "Nice place massena";
+                    break;
+                case "5":
                     System.out.println("Entrez manuellement votre origine :");
                     origin = sc.nextLine();
                     break;
@@ -50,7 +52,7 @@ public class TestWSclient {
             }
             GeoCoordinate originCoordinates = is.getCoordinatesFromOpenStreetMap(origin);
 
-            System.out.println("Destination :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Autres");
+            System.out.println("Destination :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Autres");
             String destinationChoice = sc.nextLine();
             String destination = "";
             switch (destinationChoice) {
@@ -64,6 +66,9 @@ public class TestWSclient {
                     destination = "Bruxelles Atomium";
                     break;
                 case "4":
+                    origin = "Nice place massena";
+                    break;
+                case "5":
                     System.out.println("Entrez manuellement votre origine :");
                     destination = sc.nextLine();
                     break;
@@ -72,14 +77,63 @@ public class TestWSclient {
             }
             GeoCoordinate destinationCoordinates = is.getCoordinatesFromOpenStreetMap(destination);
 
-            ArrayOfGeoCoordinate stationsArray = is.checkIfBikeIsWorthUsing(originCoordinates, destinationCoordinates);
-            List<GeoCoordinate> stations = new ArrayList<>();
-            for (GeoCoordinate geoCoordinate : stationsArray.getGeoCoordinate()) {
-                stations.add(geoCoordinate);
-            }
-            if (stations==null || stations.size() < 2) {
-                System.out.println("Walking is recommended (cycling itinerary too long)");
+            if (is.checkIfBikeIsWorthUsing(originCoordinates, destinationCoordinates)==null) {
+                Itinerary itineraryOriginToStation = is.getBikingItinerary(originCoordinates, destinationCoordinates);
+
+                // Créer la zone de texte avec défilement
+                JTextArea textArea = new JTextArea();
+                textArea.setLineWrap(true);
+                textArea.setWrapStyleWord(true);
+                textArea.setColumns(30);
+
+                JScrollPane scrollPane = new JScrollPane(textArea);
+                scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+
+                // Display the viewer in a JFrame
+                JFrame frame = new JFrame("Let's go biking !");
+                frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+                frame.setLayout(new BorderLayout());
+                frame.setSize(800, 600);
+
+                // Create a TileFactoryInfo for OpenStreetMap
+                TileFactoryInfo info = new OSMTileFactoryInfo();
+                DefaultTileFactory tileFactory = new DefaultTileFactory(info);
+                JXMapViewer mapViewer = new JXMapKit().getMainMap();
+                mapViewer.setTileFactory(tileFactory);
+
+                List<GeoPosition> trackWalking1 = new ArrayList<>();
+                List<ArrayOfdouble> geoCoordinatesWalking1 = itineraryOriginToStation.getGeometry().getValue().getCoordinates().getValue().getArrayOfdouble();
+                for (ArrayOfdouble geoCoordinate : geoCoordinatesWalking1) {
+                    trackWalking1.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
+                }
+                RoutePainter itineraire1 = new RoutePainter(trackWalking1);
+
+                RoutePainter.displayItineraire(mapViewer, itineraire1);
+
+                // Receive message from ActiveMQ
+                receivedMessages = receiveMessagesFromActiveMQ();
+
+                JButton nextButton = new JButton("Display next step");
+                nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking1)));
+                frame.add(nextButton, BorderLayout.SOUTH);
+
+                // Add the map and scrollable text area to the frame
+                frame.add(mapViewer, BorderLayout.CENTER);
+                frame.add(scrollPane, BorderLayout.WEST);
+
+                frame.setVisible(true);
+
+                Set<GeoPosition> positions = new HashSet<>(trackWalking1);
+                mapViewer.zoomToBestFit(positions, 0.7);
+
             } else {
+
+                ArrayOfGeoCoordinate stationsArray = is.checkIfBikeIsWorthUsing(originCoordinates, destinationCoordinates);
+                List<GeoCoordinate> stations = new ArrayList<>();
+                for (GeoCoordinate geoCoordinate : stationsArray.getGeoCoordinate()) {
+                    stations.add(geoCoordinate);
+                }
+
                 Itinerary itineraryOriginToStation = is.getBikingItinerary(originCoordinates, stations.get(0));
                 Itinerary itineraryStationToStation = is.getBikingItinerary(stations.get(0), stations.get(1));
                 Itinerary itineraryStationToDestination = is.getBikingItinerary(stations.get(1), destinationCoordinates);

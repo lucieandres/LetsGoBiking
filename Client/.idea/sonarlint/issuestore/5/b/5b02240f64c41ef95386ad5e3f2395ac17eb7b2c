@@ -1,19 +1,22 @@
 
-F	java:S106"+Replace this use of System.out by a logger.(ß¬Ì8úñİ†Å1
-G	java:S106-"+Replace this use of System.out by a logger.(“Œ¦³8ûñİ†Å1
-L	java:S1065"+Replace this use of System.out by a logger.(í÷±ñüÿÿÿÿ8ıñİ†Å1
-G	java:S106C"+Replace this use of System.out by a logger.(“Œ¦³8ıñİ†Å1
-L	java:S106Q"+Replace this use of System.out by a logger.(»óí»úÿÿÿÿ8ÿñİ†Å1
+\
+java:S1854E":Remove this useless assignment to local variable "origin".(¦Ä…úÿÿÿÿ8ĞïÀ‡Å1
+L	java:S106"+Replace this use of System.out by a logger.(ÌÁµ¡üÿÿÿÿ8ş§º‡Å1
+G	java:S106/"+Replace this use of System.out by a logger.(“Œ¦³8ÿ§º‡Å1
+G	java:S1067"+Replace this use of System.out by a logger.(‚¤Œ8€¨º‡Å1
+G	java:S106H"+Replace this use of System.out by a logger.(“Œ¦³8€¨º‡Å1
 v
-java:S3252^"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8òİ†Å1
+java:S3252Z"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8‚¨º‡Å1
 f
-java:S3252b"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8‚òİ†Å1
-M	java:S106•"+Replace this use of System.out by a logger.(ı™øøÿÿÿÿ8œüß†Å1
+java:S3252^"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8ƒ¨º‡Å1
+w
+java:S3252”"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8Œ¨º‡Å1
+g
+java:S3252˜"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8Œ¨º‡Å1
+M	java:S106Ë"+Replace this use of System.out by a logger.(ı™øøÿÿÿÿ8‘¨º‡Å1
 Í
-java:S5301Ÿ"®Secure this "ActiveMQConnectionFactory" by whitelisting the trusted packages using the "setTrustedPackages" method and make sure the "setTrustAllPackages" is not set to true.(‘Êƒš8§üß†Å1
+java:S5301Õ"®Secure this "ActiveMQConnectionFactory" by whitelisting the trusted packages using the "setTrustedPackages" method and make sure the "setTrustAllPackages" is not set to true.(‘Êƒš8–¨º‡Å1
 f
-java:S4201­"IRemove this unnecessary null check; "instanceof" returns false for nulls.(Ïøş8©üß†Å1
-a
-java:S1128"DRemove this unused import 'org.jxmapviewer.painter.CompoundPainter'.(”‰Õ8Î©ß†Å1
+java:S4201ã"IRemove this unnecessary null check; "instanceof" returns false for nulls.(Ïøş8—¨º‡Å1
 ä
-java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 105 to 64, Complexity from 15 to 14, Nesting Level from 3 to 2, Number of Variables from 38 to 6.(Çµí‘8–òİ†Å1
+java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 141 to 64, Complexity from 17 to 14, Nesting Level from 3 to 2, Number of Variables from 52 to 6.(Çµí‘8›¨º‡Å1

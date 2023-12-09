@@ -42,6 +42,24 @@ public class RoutePainter {
         mapViewer.setOverlayPainter(painter);
     }
 
+    public static void displayItineraire(JXMapViewer mapViewer, RoutePainter itineraire) {
+        Set<Waypoint> waypoints = new HashSet<>();
+        waypoints.add(new DefaultWaypoint(itineraire.getpoints().get(0)));
+        waypoints.add(new DefaultWaypoint(itineraire.getpoints().get(itineraire.getpoints().size() - 1)));
+
+        WaypointPainter<Waypoint> waypointPainter = new WaypointPainter<>();
+        waypointPainter.setWaypoints(waypoints);
+
+        Painter<JXMapViewer> itinerairePainterWalking = new ItinerairePainter(itineraire.getpoints(), Color.BLUE);
+
+        List<Painter<JXMapViewer>> painters = new ArrayList<>();
+        painters.add(itinerairePainterWalking);
+        painters.add(waypointPainter);
+
+        CompoundPainter<JXMapViewer> painter = new CompoundPainter<>(painters);
+        mapViewer.setOverlayPainter(painter);
+    }
+
 
     private static class ItinerairePainter implements Painter<JXMapViewer> {
         private final List<GeoPosition> itineraire;
