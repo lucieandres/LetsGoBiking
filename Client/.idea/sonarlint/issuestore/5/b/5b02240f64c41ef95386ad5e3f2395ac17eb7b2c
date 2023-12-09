@@ -1,0 +1,20 @@
+
+:
+java:S1643"Use a StringBuilder instead.(¬ƒ…ÿ8±¹ƒÅ1
+o
+java:S3776"RRefactor this method to reduce its Cognitive Complexity from 20 to the 15 allowed.(Çµí‘8»»ƒÅ1
+F	java:S106"+Replace this use of System.out by a logger.(ß¬Ì8À»ƒÅ1
+G	java:S106)"+Replace this use of System.out by a logger.(“Œ¦³8Å»ƒÅ1
+L	java:S1061"+Replace this use of System.out by a logger.(í÷±ñüÿÿÿÿ8Ç»ƒÅ1
+G	java:S106?"+Replace this use of System.out by a logger.(“Œ¦³8È»ƒÅ1
+L	java:S106M"+Replace this use of System.out by a logger.(»óí»úÿÿÿÿ8Ú»ƒÅ1
+f
+java:S3252Y"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8Í»ƒÅ1
+M	java:S106Š"+Replace this use of System.out by a logger.(ı™øøÿÿÿÿ8Ñ«ƒÅ1
+Í
+java:S5301“"®Secure this "ActiveMQConnectionFactory" by whitelisting the trusted packages using the "setTrustedPackages" method and make sure the "setTrustAllPackages" is not set to true.(‘Êƒš8Ø»ƒÅ1
+M	java:S106§"+Replace this use of System.out by a logger.(Ò¿Èæùÿÿÿÿ8Æ’ƒÅ1
+a
+java:S1128"DRemove this unused import 'org.jxmapviewer.painter.CompoundPainter'.(”‰Õ8İÑ»ƒÅ1
+ä
+java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 106 to 64, Complexity from 18 to 14, Nesting Level from 4 to 2, Number of Variables from 38 to 6.(Çµí‘8Û»ƒÅ1

@@ -1,0 +1,158 @@
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\ConsoleApp_for_Self_Hosted_WS.exe.config
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\ConsoleApp_for_Self_Hosted_WS.exe
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\ConsoleApp_for_Self_Hosted_WS.pdb
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Buffers.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Memory.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.ValueTuple.dll
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Buffers.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Memory.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.ValueTuple.xml
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\ConsoleApp_for_Self_Hosted_WS.exe.config
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.CopyComplete
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\ConsoleApp_for_Self_Hosted_WS.exe
+C:\Users\Utilisateur\LetsGoBiking\ConsoleApp_for_Self_Hosted_WS\ConsoleApp_for_Self_Hosted_WS\obj\Debug\ConsoleApp_for_Self_Hosted_WS.pdb
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\RoutingServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\RoutingServer.exe
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\RoutingServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Buffers.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Memory.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.ValueTuple.dll
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Buffers.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Memory.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Text.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\bin\Debug\System.ValueTuple.xml
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.csproj.CopyComplete
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.exe
+C:\Users\Utilisateur\LetsGoBiking\Server\ConsoleApp_for_Self_Hosted_WS\obj\Debug\RoutingServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\RoutingServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\RoutingServer.exe
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\RoutingServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Buffers.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Memory.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Text.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.ValueTuple.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Buffers.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Memory.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Text.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.ValueTuple.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\obj\Debug\RoutingServer.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\obj\Debug\RoutingServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\obj\Debug\RoutingServer.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\obj\Debug\RoutingServer.csproj.CopyComplete
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\obj\Debug\RoutingServer.exe
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\obj\Debug\RoutingServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\ProxyCacheServer.exe
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\ProxyCacheServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\ProxyCacheServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\RoutingServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\RoutingServer.exe
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\RoutingServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Newtonsoft.Json.Bson.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Newtonsoft.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\ProxyCacheServer.exe
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Buffers.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Memory.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Net.Http.Formatting.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Numerics.Vectors.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Runtime.CompilerServices.Unsafe.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Text.Encodings.Web.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Text.Json.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Threading.Tasks.Extensions.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.ValueTuple.dll
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\ProxyCacheServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\ProxyCacheServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Microsoft.Bcl.AsyncInterfaces.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Newtonsoft.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Newtonsoft.Json.Bson.pdb
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\Newtonsoft.Json.Bson.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Buffers.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Memory.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Net.Http.Formatting.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Numerics.Vectors.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Runtime.CompilerServices.Unsafe.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Text.Encodings.Web.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Text.Json.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.Threading.Tasks.Extensions.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\bin\Debug\System.ValueTuple.xml
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.exe.config
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.csproj.CopyComplete
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.exe
+C:\Users\Utilisateur\LetsGoBiking\sauvegarde\ServersProxy - Copie\RoutingServer\obj\Debug\RoutingServer.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Apache.NMS.ActiveMQ.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Apache.NMS.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\ICSharpCode.SharpZipLib.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\ICSharpCode.SharpZipLib.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\ICSharpCode.SharpZipLib.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Microsoft.Extensions.Logging.Abstractions.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Pipelines.Sockets.Unofficial.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.IO.Pipelines.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Threading.Channels.dll
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Microsoft.Extensions.Logging.Abstractions.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\Pipelines.Sockets.Unofficial.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.IO.Pipelines.xml
+C:\Users\Utilisateur\LetsGoBiking\Servers\RoutingServer\bin\Debug\System.Threading.Channels.xml

@@ -1,0 +1,8 @@
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\bin\Debug\test.exe.config
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\bin\Debug\test.exe
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\bin\Debug\test.pdb
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\obj\Debug\test.csproj.AssemblyReference.cache
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\obj\Debug\test.csproj.SuggestedBindingRedirects.cache
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\obj\Debug\test.csproj.CoreCompileInputs.cache
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\obj\Debug\test.exe
+C:\Users\Utilisateur\LetsGoBiking\Servers\test\obj\Debug\test.pdb
