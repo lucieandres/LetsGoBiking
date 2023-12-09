@@ -107,9 +107,36 @@ namespace RoutingServer
             }
         }
 
-        private Station CalculateClosestStation(GeoCoordinate coordinates, string param)
+        private async Task<Station> CalculateClosestStationAsync(GeoCoordinate coordinates, string param)
         {
 
+            List<Station> closestStations = CalculateClosestStations(coordinates, param);
+
+            double shortestSegmentDistance = double.MaxValue;
+            Station closestStation = null;
+
+            foreach (var station in closestStations)
+            {
+                var itinerary = await CalculateItinary(
+                    coordinates,
+                    new GeoCoordinate(station.position.latitude, station.position.longitude)
+                );
+
+                double totalDistance = itinerary.Segments.Sum(seg => seg.Distance);
+
+                if (totalDistance < shortestSegmentDistance)
+                {
+                    shortestSegmentDistance = totalDistance;
+                    closestStation = station;
+                }
+            }
+
+            return closestStation;
+
+        }
+
+        private List<Station> CalculateClosestStations(GeoCoordinate coordinates, string param, int count = 5)
+        {
             if (coordinates != null)
             {
                 List<Station> availableStations = new List<Station>();
@@ -126,37 +153,24 @@ namespace RoutingServer
 
                 if (availableStations.Count > 0)
                 {
+                    List<Station> closestStations = new List<Station>();
 
-                    Station closestStation = availableStations[0];
-                    double shortestDistance = CalculateDistance(coordinates.Latitude, coordinates.Longitude, closestStation.position.latitude, closestStation.position.longitude);
-
-                    foreach (var station in availableStations)
+                    availableStations.Sort((station1, station2) =>
                     {
-                        if (station.position != null)
-                        {
-                            double distance = CalculateDistance(coordinates.Latitude, coordinates.Longitude, station.position.latitude, station.position.longitude);
+                        double distance1 = CalculateDistance(coordinates.Latitude, coordinates.Longitude, station1.position.latitude, station1.position.longitude);
+                        double distance2 = CalculateDistance(coordinates.Latitude, coordinates.Longitude, station2.position.latitude, station2.position.longitude);
+                        return distance1.CompareTo(distance2);
+                    });
 
-                            if (distance < shortestDistance)
-                            {
-                                shortestDistance = distance;
-                                closestStation = station;
-                            }
-                        }
-                    }
+                    closestStations = availableStations.Take(count).ToList();
 
-                    return closestStation;
-                }
-                else
-                {
-                    return null;
+                    return closestStations;
                 }
             }
-            else
-            {
-                return null;
-            }
+            return null;
         }
-        
+
+
         private async Task<Itinerary> CalculateItinary(GeoCoordinate origin, GeoCoordinate destination)
         {
             var requestUri = BuildRequestUri(ORSAPIKey, origin, destination);
@@ -329,8 +343,8 @@ namespace RoutingServer
 
         public async Task<List<GeoCoordinate>> CheckIfBikeIsWorthUsing(GeoCoordinate originCoordinates, GeoCoordinate destinationCoordinates)
         {
-            Station originStation = CalculateClosestStation(originCoordinates, "bikes");
-            Station destinationStation = CalculateClosestStation(destinationCoordinates, "spots");
+            Station originStation = await CalculateClosestStationAsync(originCoordinates, "bikes");
+            Station destinationStation = await CalculateClosestStationAsync(destinationCoordinates, "spots");
 
             if (originStation == null || destinationStation == null)
             {
