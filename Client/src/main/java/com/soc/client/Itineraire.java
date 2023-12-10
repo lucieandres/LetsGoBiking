@@ -1,4 +1,4 @@
-package com.soc.testwsclient;
+package com.soc.client;
 import org.jxmapviewer.JXMapViewer;
 import org.jxmapviewer.painter.CompoundPainter;
 import org.jxmapviewer.viewer.*;
@@ -9,10 +9,10 @@ import java.awt.geom.Point2D;
 import java.util.*;
 import java.util.List;
 
-public class RoutePainter {
+public class Itineraire {
     private List<GeoPosition> points;
 
-    public RoutePainter(List<GeoPosition> points) {
+    public Itineraire(List<GeoPosition> points) {
         this.points = new ArrayList<>(points);
     }
 
@@ -20,7 +20,7 @@ public class RoutePainter {
         return points;
     }
 
-    static void displayItineraire(JXMapViewer mapViewer, RoutePainter itineraireWalking, RoutePainter itineraireBiking, RoutePainter itineraireWalkingEnd) {
+    static void displayItineraire(JXMapViewer mapViewer, Itineraire itineraireWalking, Itineraire itineraireBiking, Itineraire itineraireWalkingEnd) {
         Set<Waypoint> waypoints = new HashSet<>();
         waypoints.add(new DefaultWaypoint(itineraireWalking.getpoints().get(0)));
         waypoints.add(new DefaultWaypoint(itineraireWalkingEnd.getpoints().get(itineraireWalkingEnd.getpoints().size() - 1)));
@@ -42,7 +42,7 @@ public class RoutePainter {
         mapViewer.setOverlayPainter(painter);
     }
 
-    public static void displayItineraire(JXMapViewer mapViewer, RoutePainter itineraire) {
+    public static void displayItineraire(JXMapViewer mapViewer, Itineraire itineraire) {
         Set<Waypoint> waypoints = new HashSet<>();
         waypoints.add(new DefaultWaypoint(itineraire.getpoints().get(0)));
         waypoints.add(new DefaultWaypoint(itineraire.getpoints().get(itineraire.getpoints().size() - 1)));

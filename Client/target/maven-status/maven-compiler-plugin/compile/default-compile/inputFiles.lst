@@ -11,15 +11,15 @@ C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\g
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\GeoPosition.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\Segment.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\CheckIfBikeIsWorthUsingResponse.java
-C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soc\testwsclient\TestWSclient.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\GetCoordinatesFromOpenStreetMapResponse.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\GeoCoordinate.java
+C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soc\client\Client.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\GetCoordinatesFromOpenStreetMap.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\LetsGoBiking.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\Station.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\ArrayOfGeoCoordinate.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\ArrayOfGeoPosition.java
-C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soc\testwsclient\RoutePainter.java
+C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soc\client\Itineraire.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\Step.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\GetBikingItinerary.java
 C:\Users\Utilisateur\test\LetsGoBiking\Client\src\main\java\com\soap\ws\client\generated\Geometry.java

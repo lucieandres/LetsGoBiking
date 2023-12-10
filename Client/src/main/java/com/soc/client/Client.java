@@ -1,4 +1,4 @@
-package com.soc.testwsclient;
+package com.soc.client;
 
 import com.soap.ws.client.generated.*;
 import org.apache.activemq.ActiveMQConnectionFactory;
@@ -14,7 +14,7 @@ import java.awt.*;
 import java.util.*;
 import java.util.List;
 
-public class TestWSclient {
+public class Client {
 
     private static List<String> receivedMessages = new ArrayList<>();
     private static int currentIndexText = 0;
@@ -27,7 +27,7 @@ public class TestWSclient {
             ILetsGoBiking is = service.getBasicHttpBindingILetsGoBiking();
             Scanner sc = new Scanner(System.in);
 
-            System.out.println("Origine :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Autres");
+            System.out.println("Origin :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Others");
             String originChoice = sc.nextLine();
             String origin = "";
             switch (originChoice) {
@@ -44,7 +44,7 @@ public class TestWSclient {
                     origin = "Nice place massena";
                     break;
                 case "5":
-                    System.out.println("Entrez manuellement votre origine :");
+                    System.out.println("Write your own origin :");
                     origin = sc.nextLine();
                     break;
                 default:
@@ -52,7 +52,7 @@ public class TestWSclient {
             }
             GeoCoordinate originCoordinates = is.getCoordinatesFromOpenStreetMap(origin);
 
-            System.out.println("Destination :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Autres");
+            System.out.println("Destination :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Others");
             String destinationChoice = sc.nextLine();
             String destination = "";
             switch (destinationChoice) {
@@ -66,10 +66,10 @@ public class TestWSclient {
                     destination = "Bruxelles Atomium";
                     break;
                 case "4":
-                    origin = "Nice place massena";
+                    destination = "Nice place massena";
                     break;
                 case "5":
-                    System.out.println("Entrez manuellement votre origine :");
+                    System.out.println("Write your own destination :");
                     destination = sc.nextLine();
                     break;
                 default:
@@ -80,7 +80,6 @@ public class TestWSclient {
             if (is.checkIfBikeIsWorthUsing(originCoordinates, destinationCoordinates)==null) {
                 Itinerary itineraryOriginToStation = is.getBikingItinerary(originCoordinates, destinationCoordinates);
 
-                // Créer la zone de texte avec défilement
                 JTextArea textArea = new JTextArea();
                 textArea.setLineWrap(true);
                 textArea.setWrapStyleWord(true);
@@ -89,41 +88,37 @@ public class TestWSclient {
                 JScrollPane scrollPane = new JScrollPane(textArea);
                 scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-                // Display the viewer in a JFrame
                 JFrame frame = new JFrame("Let's go biking !");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setLayout(new BorderLayout());
                 frame.setSize(800, 600);
 
-                // Create a TileFactoryInfo for OpenStreetMap
                 TileFactoryInfo info = new OSMTileFactoryInfo();
                 DefaultTileFactory tileFactory = new DefaultTileFactory(info);
                 JXMapViewer mapViewer = new JXMapKit().getMainMap();
                 mapViewer.setTileFactory(tileFactory);
 
-                List<GeoPosition> trackWalking1 = new ArrayList<>();
+                List<GeoPosition> trackWalking = new ArrayList<>();
                 List<ArrayOfdouble> geoCoordinatesWalking1 = itineraryOriginToStation.getGeometry().getValue().getCoordinates().getValue().getArrayOfdouble();
                 for (ArrayOfdouble geoCoordinate : geoCoordinatesWalking1) {
-                    trackWalking1.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
+                    trackWalking.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
                 }
-                RoutePainter itineraire1 = new RoutePainter(trackWalking1);
+                Itineraire itineraire = new Itineraire(trackWalking);
 
-                RoutePainter.displayItineraire(mapViewer, itineraire1);
+                Itineraire.displayItineraire(mapViewer, itineraire);
 
-                // Receive message from ActiveMQ
                 receivedMessages = receiveMessagesFromActiveMQ();
 
                 JButton nextButton = new JButton("Display next step");
-                nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking1)));
+                nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking)));
                 frame.add(nextButton, BorderLayout.SOUTH);
 
-                // Add the map and scrollable text area to the frame
                 frame.add(mapViewer, BorderLayout.CENTER);
                 frame.add(scrollPane, BorderLayout.WEST);
 
                 frame.setVisible(true);
 
-                Set<GeoPosition> positions = new HashSet<>(trackWalking1);
+                Set<GeoPosition> positions = new HashSet<>(trackWalking);
                 mapViewer.zoomToBestFit(positions, 0.7);
 
             } else {
@@ -138,7 +133,6 @@ public class TestWSclient {
                 Itinerary itineraryStationToStation = is.getBikingItinerary(stations.get(0), stations.get(1));
                 Itinerary itineraryStationToDestination = is.getBikingItinerary(stations.get(1), destinationCoordinates);
 
-                // Créer la zone de texte avec défilement
                 JTextArea textArea = new JTextArea();
                 textArea.setLineWrap(true);
                 textArea.setWrapStyleWord(true);
@@ -147,13 +141,11 @@ public class TestWSclient {
                 JScrollPane scrollPane = new JScrollPane(textArea);
                 scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
 
-                // Display the viewer in a JFrame
                 JFrame frame = new JFrame("Let's go biking !");
                 frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
                 frame.setLayout(new BorderLayout());
                 frame.setSize(800, 600);
 
-                // Create a TileFactoryInfo for OpenStreetMap
                 TileFactoryInfo info = new OSMTileFactoryInfo();
                 DefaultTileFactory tileFactory = new DefaultTileFactory(info);
                 JXMapViewer mapViewer = new JXMapKit().getMainMap();
@@ -164,32 +156,30 @@ public class TestWSclient {
                 for (ArrayOfdouble geoCoordinate : geoCoordinatesWalking1) {
                     trackWalking1.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
                 }
-                RoutePainter itineraire1 = new RoutePainter(trackWalking1);
+                Itineraire walkingItinerary1 = new Itineraire(trackWalking1);
 
                 List<GeoPosition> trackBiking2 = new ArrayList<>();
                 List<ArrayOfdouble> geoCoordinatesBiking2 = itineraryStationToStation.getGeometry().getValue().getCoordinates().getValue().getArrayOfdouble();
                 for (ArrayOfdouble geoCoordinate : geoCoordinatesBiking2) {
                     trackBiking2.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
                 }
-                RoutePainter itineraire2 = new RoutePainter(trackBiking2);
+                Itineraire bikingItinerary2 = new Itineraire(trackBiking2);
 
                 List<GeoPosition> trackWalking3 = new ArrayList<>();
                 List<ArrayOfdouble> geoCoordinatesWalking3 = itineraryStationToDestination.getGeometry().getValue().getCoordinates().getValue().getArrayOfdouble();
                 for (ArrayOfdouble geoCoordinate : geoCoordinatesWalking3) {
                     trackWalking3.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
                 }
-                RoutePainter itineraire3 = new RoutePainter(trackWalking3);
+                Itineraire walkingItinerary3 = new Itineraire(trackWalking3);
 
-                RoutePainter.displayItineraire(mapViewer, itineraire1, itineraire2, itineraire3);
+                Itineraire.displayItineraire(mapViewer, walkingItinerary1, bikingItinerary2, walkingItinerary3);
 
-                // Receive message from ActiveMQ
                 receivedMessages = receiveMessagesFromActiveMQ();
 
                 JButton nextButton = new JButton("Display next step");
                 nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking1, trackBiking2, trackWalking3)));
                 frame.add(nextButton, BorderLayout.SOUTH);
 
-                // Add the map and scrollable text area to the frame
                 frame.add(mapViewer, BorderLayout.CENTER);
                 frame.add(scrollPane, BorderLayout.WEST);
 
@@ -220,7 +210,6 @@ public class TestWSclient {
 
             MessageConsumer consumer = session.createConsumer(destination);
 
-            // Attempt to receive messages for a limited time
             long startTime = System.currentTimeMillis();
             while (System.currentTimeMillis() - startTime < 5000) { // Receive messages for 5 seconds
                 Message message = consumer.receive(100); // Wait for 100ms for a message
@@ -234,6 +223,7 @@ public class TestWSclient {
             consumer.close();
             session.close();
             connection.close();
+
         } catch (JMSException e) {
             e.printStackTrace();
         }
