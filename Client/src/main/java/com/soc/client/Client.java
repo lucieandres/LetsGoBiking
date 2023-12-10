@@ -178,7 +178,7 @@ public class Client {
                 Itineraire walkingItinerary3 = new Itineraire(trackWalking3);
 
                 Itineraire.displayItineraire(mapViewer, walkingItinerary1, bikingItinerary2, walkingItinerary3);
-                textArea.append("Your itinerary is composed of 3 steps : Click on \"Display next step\" to see the first step !\n\n");
+                textArea.append("Your itinerary is composed of 3 steps !\nClick on \"Display next step\" to see the first step !\n\n");
 
                 receivedMessages = receiveMessagesFromActiveMQ();
 
