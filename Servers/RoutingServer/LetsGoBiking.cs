@@ -310,7 +310,7 @@ namespace RoutingServer
                                 double.TryParse(result.Value<string>("lon"), NumberStyles.Any, CultureInfo.InvariantCulture, out longitude))
                             {
                                 GeoCoordinate geoCoordinate = new GeoCoordinate(latitude, longitude);
-                                return geoCoordinate; // Renvoie le premier résultat trouvé
+                                return geoCoordinate;
                             }
                             else
                             {
