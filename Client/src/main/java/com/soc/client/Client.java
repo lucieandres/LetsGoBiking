@@ -106,15 +106,20 @@ public class Client {
                 Itineraire itineraire = new Itineraire(trackWalking);
 
                 Itineraire.displayItineraire(mapViewer, itineraire);
+                textArea.append("Walking is the best option for you !\nClick on \"Display next step\" to see the itinerary !\n\n");
 
                 receivedMessages = receiveMessagesFromActiveMQ();
 
+                JPanel textAndButtonPanel = new JPanel();
+                textAndButtonPanel.setLayout(new BorderLayout());
+                textAndButtonPanel.add(scrollPane, BorderLayout.CENTER);
+
                 JButton nextButton = new JButton("Display next step");
                 nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking)));
-                frame.add(nextButton, BorderLayout.SOUTH);
+                textAndButtonPanel.add(nextButton, BorderLayout.SOUTH);
 
                 frame.add(mapViewer, BorderLayout.CENTER);
-                frame.add(scrollPane, BorderLayout.WEST);
+                frame.add(textAndButtonPanel, BorderLayout.EAST);
 
                 frame.setVisible(true);
 
@@ -173,15 +178,20 @@ public class Client {
                 Itineraire walkingItinerary3 = new Itineraire(trackWalking3);
 
                 Itineraire.displayItineraire(mapViewer, walkingItinerary1, bikingItinerary2, walkingItinerary3);
+                textArea.append("Your itinerary is composed of 3 steps : Click on \"Display next step\" to see the first step !\n\n");
 
                 receivedMessages = receiveMessagesFromActiveMQ();
 
+                JPanel textAndButtonPanel = new JPanel();
+                textAndButtonPanel.setLayout(new BorderLayout());
+                textAndButtonPanel.add(scrollPane, BorderLayout.CENTER);
+
                 JButton nextButton = new JButton("Display next step");
                 nextButton.addActionListener(e -> displayNextMessage(textArea, mapViewer, Arrays.asList(trackWalking1, trackBiking2, trackWalking3)));
-                frame.add(nextButton, BorderLayout.SOUTH);
+                textAndButtonPanel.add(nextButton, BorderLayout.SOUTH);
 
                 frame.add(mapViewer, BorderLayout.CENTER);
-                frame.add(scrollPane, BorderLayout.WEST);
+                frame.add(textAndButtonPanel, BorderLayout.EAST);
 
                 frame.setVisible(true);
 
