@@ -1,20 +1,26 @@
 
-G	java:S106"+Replace this use of System.out by a logger.(ºÉçñ8‘†œÅ1
-G	java:S106/"+Replace this use of System.out by a logger.(ÑÌíÉ8”†œÅ1
-L	java:S1067"+Replace this use of System.out by a logger.(èÁèËşÿÿÿÿ8•†œÅ1
-L	java:S106H"+Replace this use of System.out by a logger.(Í¯¨»ûÿÿÿÿ8—†œÅ1
+G	java:S106"+Replace this use of System.out by a logger.(ºÉçñ8Ú‰Ü¥Å1
+G	java:S106."+Replace this use of System.out by a logger.(ÑÌíÉ8Û‰Ü¥Å1
+L	java:S1066"+Replace this use of System.out by a logger.(èÁèËşÿÿÿÿ8Ü‰Ü¥Å1
+L	java:S106G"+Replace this use of System.out by a logger.(Í¯¨»ûÿÿÿÿ8İ‰Ü¥Å1
 v
-java:S3252Y"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8›†œÅ1
+java:S3252X"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8à‰Ü¥Å1
 f
-java:S3252\"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8†œÅ1
+java:S3252["IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8á‰Ü¥Å1
 w
-java:S3252“"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8êÍÆœÅ1
+java:S3252’"YUse static access with "javax.swing.ScrollPaneConstants" for "VERTICAL_SCROLLBAR_ALWAYS".(ìæ¢›8ê‰Ü¥Å1
 g
-java:S3252–"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8ëÍÆœÅ1
-M	java:S106Ë"+Replace this use of System.out by a logger.(ı™øøÿÿÿÿ8ñÍÆœÅ1
+java:S3252•"IUse static access with "javax.swing.WindowConstants" for "EXIT_ON_CLOSE".(¢¡´8ê‰Ü¥Å1
+M	java:S106Ê"+Replace this use of System.out by a logger.(ı™øøÿÿÿÿ8ó‰Ü¥Å1
 Í
-java:S5301Õ"®Secure this "ActiveMQConnectionFactory" by whitelisting the trusted packages using the "setTrustedPackages" method and make sure the "setTrustAllPackages" is not set to true.(‘Êƒš8ûÍÆœÅ1
+java:S5301Ô"®Secure this "ActiveMQConnectionFactory" by whitelisting the trusted packages using the "setTrustedPackages" method and make sure the "setTrustAllPackages" is not set to true.(‘Êƒš8ù‰Ü¥Å1
 f
-java:S4201â"IRemove this unnecessary null check; "instanceof" returns false for nulls.(Ïøş8ıÍÆœÅ1
+java:S4201á"IRemove this unnecessary null check; "instanceof" returns false for nulls.(Ïøş8ú‰Ü¥Å1
+V
+java:S1854‰"9Remove this useless assignment to local variable "steps".(—ê‘	8ş‰Ü¥Å1
+E
+java:S1905ˆ"'Remove this unnecessary cast to "List".(Üå8ş‰Ü¥Å1
+J
+java:S1905‘"'Remove this unnecessary cast to "List".(öÜøúÿÿÿÿ8ŠÜ¥Å1
 ä
-java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 149 to 64, Complexity from 17 to 14, Nesting Level from 3 to 2, Number of Variables from 54 to 6.(Çµí‘8ã†œÅ1
+java:S6541"ÆA "Brain Method" was detected. Refactor it to reduce at least one of the following metrics: LOC from 146 to 64, Complexity from 17 to 14, Nesting Level from 3 to 2, Number of Variables from 51 to 6.(Çµí‘8ƒŠÜ¥Å1

@@ -16,6 +16,9 @@ import java.util.List;
 
 public class Client {
 
+    private static LetsGoBiking service = new LetsGoBiking();
+    private static ILetsGoBiking is = service.getBasicHttpBindingILetsGoBiking();
+    private static Scanner sc = new Scanner(System.in);
     private static List<String> receivedMessages = new ArrayList<>();
     private static int currentIndexText = 0;
     private static int currentIndexZoom = 0;
@@ -23,10 +26,6 @@ public class Client {
     public static void main(String[] args) {
 
         try {
-            LetsGoBiking service = new LetsGoBiking();
-            ILetsGoBiking is = service.getBasicHttpBindingILetsGoBiking();
-            Scanner sc = new Scanner(System.in);
-
             System.out.println("Origin :\n 1. Polytech Nice Sophia\n 2. Lyon Brasserie Georges\n 3. Bruxelles Atomium\n 4. Nice place massena\n 5. Others");
             String originChoice = sc.nextLine();
             String origin = "";
@@ -78,7 +77,7 @@ public class Client {
             GeoCoordinate destinationCoordinates = is.getCoordinatesFromOpenStreetMap(destination);
 
             if (is.checkIfBikeIsWorthUsing(originCoordinates, destinationCoordinates)==null) {
-                Itinerary itineraryOriginToStation = is.getBikingItinerary(originCoordinates, destinationCoordinates);
+                Itinerary itineraryOriginToDestination = is.getBikingItinerary(originCoordinates, destinationCoordinates);
 
                 JTextArea textArea = new JTextArea();
                 textArea.setLineWrap(true);
@@ -99,7 +98,7 @@ public class Client {
                 mapViewer.setTileFactory(tileFactory);
 
                 List<GeoPosition> trackWalking = new ArrayList<>();
-                List<ArrayOfdouble> geoCoordinatesWalking1 = itineraryOriginToStation.getGeometry().getValue().getCoordinates().getValue().getArrayOfdouble();
+                List<ArrayOfdouble> geoCoordinatesWalking1 = itineraryOriginToDestination.getGeometry().getValue().getCoordinates().getValue().getArrayOfdouble();
                 for (ArrayOfdouble geoCoordinate : geoCoordinatesWalking1) {
                     trackWalking.add(new GeoPosition(geoCoordinate.getDouble().get(0), geoCoordinate.getDouble().get(1)));
                 }
@@ -108,7 +107,7 @@ public class Client {
                 Itineraire.displayItineraire(mapViewer, itineraire);
                 textArea.append("Walking is the best option for you !\nClick on \"Display next step\" to see the itinerary !\n\n");
 
-                receivedMessages = receiveMessagesFromActiveMQ();
+                receivedMessages = receiveMessagesFromActiveMQ(Arrays.asList(itineraryOriginToDestination));
 
                 JPanel textAndButtonPanel = new JPanel();
                 textAndButtonPanel.setLayout(new BorderLayout());
@@ -180,7 +179,7 @@ public class Client {
                 Itineraire.displayItineraire(mapViewer, walkingItinerary1, bikingItinerary2, walkingItinerary3);
                 textArea.append("Your itinerary is composed of 3 steps !\nClick on \"Display next step\" to see the first step !\n\n");
 
-                receivedMessages = receiveMessagesFromActiveMQ();
+                receivedMessages = receiveMessagesFromActiveMQ(Arrays.asList(itineraryOriginToStation, itineraryStationToStation, itineraryStationToDestination));
 
                 JPanel textAndButtonPanel = new JPanel();
                 textAndButtonPanel.setLayout(new BorderLayout());
@@ -204,7 +203,7 @@ public class Client {
         }
     }
 
-    private static List<String> receiveMessagesFromActiveMQ() {
+    private static List<String> receiveMessagesFromActiveMQ(List<Itinerary> itineraries) {
         String brokerUrl = "tcp://localhost:61616";
         String queueName = "bikingItineraryQueue";
         List<String> receivedMessages = new ArrayList<>();
@@ -235,7 +234,9 @@ public class Client {
             connection.close();
 
         } catch (JMSException e) {
-            e.printStackTrace();
+            for (Itinerary itinerary : itineraries) {
+                receivedMessages.add(convertInstructionsToJson(itinerary));
+            }
         }
 
         return receivedMessages;
@@ -255,6 +256,35 @@ public class Client {
             textArea.append("You have reached the end of the itinerary !\n\n");
         }
     }
+
+    public static String convertInstructionsToJson(Itinerary itinerary) {
+        StringBuilder instructionsBuilder = new StringBuilder();
+
+        try {
+            List<Segment> segments = (List<Segment>) itinerary.getSegments().getValue().getSegment();
+            List<Step> steps = new ArrayList<>();
+            for (Segment segment : segments) {
+                double distanceInKm = segment.getDistance() / 1000.0;
+                double durationInHours = segment.getDuration() / 3600.0;
+
+                instructionsBuilder.append(String.format("Segment distance: %.2f kilometers, duration: %.2f hours%n", distanceInKm, durationInHours));
+                instructionsBuilder.append("\n");
+
+                steps = (List<Step>) segment.getSteps().getValue().getStep();
+                for (Step step : steps) {
+                    instructionsBuilder.append(String.format("Instruction: %s%n", step.getInstruction().getValue()));
+                    instructionsBuilder.append(String.format("- Distance: %.2f meters, Duration: %.2f seconds%n", step.getDistance(), step.getDuration()));
+                    instructionsBuilder.append("\n");
+                }
+            }
+
+            return instructionsBuilder.toString();
+        } catch (Exception ex) {
+            ex.printStackTrace();
+            return "Erreur lors de la conversion des instructions.";
+        }
+    }
+
 
 
 }

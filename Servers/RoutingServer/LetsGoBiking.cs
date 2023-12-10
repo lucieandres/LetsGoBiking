@@ -43,9 +43,32 @@ namespace RoutingServer
 
             string instructionsJson = ConvertInstructionsToJson(itinerary);
 
-            Send(instructionsJson);
-
+            if (IsActivemqRunning())
+            {
+                Send(instructionsJson);
+            }
+            else
+            {
+                Console.WriteLine("ActiveMQ is not running. Unable to send message.");
+            }
             return itinerary;
+        }
+
+        private bool IsActivemqRunning()
+        {
+            try
+            {
+                Uri connectUri = new Uri("activemq:tcp://localhost:61616");
+                var connectionFactory = new ConnectionFactory(connectUri);
+                using (var connection = connectionFactory.CreateConnection())
+                {
+                    return true;
+                }
+            }
+            catch (Exception)
+            {
+                return false;
+            }
         }
 
         public void Send(string message)
@@ -248,7 +271,7 @@ namespace RoutingServer
 
             return $"https://api.openrouteservice.org/v2/directions/cycling-regular/?api_key={apiKey}&start={origin}&end={destination}";
         }
-
+        
         private string ConvertInstructionsToJson(Itinerary itinerary)
         {
             if (itinerary == null || itinerary.Segments == null || itinerary.Segments.Count == 0)
@@ -266,6 +289,7 @@ namespace RoutingServer
                     double durationInHours = segment.Duration / 3600.0;
 
                     instructionsBuilder.AppendLine($"Segment distance: {distanceInKm:F2} kilometers, duration: {durationInHours:F2} hours");
+                    instructionsBuilder.AppendLine();
 
                     foreach (var step in segment.Steps)
                     {
@@ -369,6 +393,5 @@ namespace RoutingServer
                 }
             }
         }
-
     }
 }
