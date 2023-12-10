@@ -29,6 +29,6 @@ Avant de commencer, assurez-vous d'avoir correctement configuré l'environnement
 - En sélectionnant Polytech Nice Sophia - Nice Place Masséna, vous aurez un exemple idéal où la marche est préferable.
 
 ## A propos :
-- Stockage des stations ayant un vélo siponible (ou une place), puis recherche parmi celles-ci des 5 stations les plus proches en distance, puis recherche parmi ces 5 de celle ayant l'itinéraire le plus court.
+- Stockage des stations ayant un vélo diponible (ou une place), puis recherche parmi celles-ci des 5 stations les plus proches en distance, puis recherche parmi ces 5 de celle ayant l'itinéraire le plus court.
 - Itineraire bleu pour la marche, rouge pour lé vélo.
 - Point de départ bleu, point d'arrivée rouge.
